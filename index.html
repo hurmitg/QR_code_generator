@@ -1,0 +1,66 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d47ce3a0cf.js" crossorigin="anonymous"></script>
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="qrstyle.css">
+    <script src="qr.js"></script>
+
+</head>
+<body>
+    
+    <form action="\">
+        <div class="head">   
+            <h1>QR Code Generator</h1>
+        </div>
+
+    <div class="main">
+        
+        <div class="container">
+            <div class="box">
+                <div class="box1">
+                    <i onclick="text()" class="icons i fa-solid fa-align-justify"> TEXT </i>       
+                    <i onclick="url()" class="icons i fa-solid fa-link"> URL </i>       
+                    <i onclick="card()" class="icons i fa-solid fa-address-card"> V-CARD </i>
+                    <i onclick="wifi()" class="icons i fa-solid fa-wifi"> WIFI </i> 
+                </div>
+    
+                <div class="input" id="inn"></div>
+            </div>
+
+            
+            
+         <div class="box2">
+            <select class="i" id="size">
+                <option value="100x100">100x100</option>
+                <option value="150x150">150x150</option>
+                <option value="200x200">200x200</option>
+                <option value="250x250" selected>250x250</option>
+                <option value="300x300">300x300</option>
+                <option value="300x400">400x400</option>
+            </select>          
+            <button class="i" id="reset" type="reset"><i class="fa-solid fa-arrows-rotate"></i></button>
+            <button type="button"  id="submit" onclick="genQR()">Generate QR</button>
+         </div>
+
+        </div>
+
+      
+        <div class="qr">
+            <img src="https://chart.googleapis.com/chart?chf=bg,s,65432100&cht=qr&chs=250x250&chl=~%20Developed%20By%20Hurmit" id="img">
+
+            <h2>Your QR here</h2>
+
+            <p>
+                Developed by Hurmit
+            </p>
+        </div>
+       
+    </div>
+</form>
+</body>
+
+</html>
